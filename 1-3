@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+int main()
+{
+    char c;
+    char g;
+    int d = 1;
+
+    int f[3];
+    int  a[3];//a分别对应后面三个
+    printf("请依次输入货品种类，通道标号，货品单价，货品个数\n");
+    scanf("%c", &c, 1);
+    getchar();
+    for (int n = 0;n <= 2;n++)
+    {
+        scanf("%d", &a[n]);
+        getchar();
+    }
+    printf("请依次输入想购买的商品，通道编号，购买个数\n");
+
+    scanf("%c", &g, 1);
+    getchar();
+    for (int j = 0;j <= 1;j++)
+    {
+        scanf("%d", &f[j]);
+        getchar();
+    }
+    int b[10], i;//i是指第几次投硬币，sum是投进去的钱，a是指价格=a[1]
+    int sum = 0;
+    // printf("请再次输入需要购买的商品的单价\n");
+     //scanf("%d", &a[1]);
+
+    if (c == g)
+    {
+        if (a[0] != f[0])
+        {
+            printf("通道编号不一致请重新输入\n");
+        }
+        else if (f[1] > a[2])
+        {
+            printf("购买数量大于剩余数量\n");
+        }
+        else
+        {
+            printf("请进行投币购买,仅可投入1，2，5元硬币\n");
+            if (sum != 1 && sum != 2 && sum != 5)
+            {
+                printf("请输入正确的投币金额\n");
+            }
+            else
+            {
+                scanf("%d", &sum);
+            }
+            for (;f[1] >= 0;f[1]--)
+            {
+                if (f[1] == 0)
+                {
+                    printf("购买已完成\n");
+                }
+                else
+                {
+                    if (sum >= a[1])
+                    {
+                        printf("找零%d元\n", (sum - a[1]));
+                        sum = 0;
+
+                    }
+                    else if (d == 0)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        for (i = 0;sum < a[1];i++)
+                        {
+                            scanf("%d", &b[i]);
+                            if (b[i] != 1 && b[i] != 2 && b[i] != 5)
+                                printf("请输入正确的投币金额\n");
+                            else {
+                                sum = sum + b[i];
+                            }
+                        }
+                        printf("找零%d元\n", (sum - a[1]));
+                        b[i] = { 0 };
+                        sum = 0;
+
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        printf("请输入对应的商品\n");
+
+    }
+}
