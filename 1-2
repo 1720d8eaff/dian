@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int a, b[10],i,sum;
+    sum = 0;
+    scanf("%d", &a);
+    scanf("%d", &sum);
+   
+        if (sum >= a)
+        {
+            printf("%d\n", (sum - a));
+        }
+
+        else
+        {
+            for (i = 0;sum < a;i++)
+            {
+
+                scanf("%d", &b[i]);
+                if (b[i] != 1 && b[i] != 2 && b[i] != 5)
+                    printf("请输入正确的投币金额/n");
+                else {
+                    sum = sum + b[i];
+                }
+            }
+            printf("%d\n", (sum - a));
+        }
+    }
+
