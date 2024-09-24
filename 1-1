@@ -1,0 +1,23 @@
+#include <stdio.h>
+//level 1-1
+int main()
+{
+	char c;
+	int  a[3];
+	//printf("请依次输入货品种类，通道标号，货品单价，货品个数\n");
+	scanf("%c", &c);
+	for (int n = 0;n <= 2;n++)
+	{
+		scanf("%d", &a[n]);
+	}
+	
+	printf("%d: ", a[0]);
+	for (int i = 0;i <= a[2];i++)
+	{
+		printf("%c", c);
+	}
+	printf("%d", a[1]);
+	return 0;
+
+}
+
