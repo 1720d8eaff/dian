@@ -9,7 +9,7 @@ int main()
     int f[3];
     int  a[3];//a分别对应后面三个
     printf("请依次输入货品种类，通道标号，货品单价，货品个数\n");
-    scanf("%c", &c, 1);
+    scanf("%c", &c);
     getchar();
     for (int n = 0;n <= 2;n++)
     {
@@ -18,7 +18,7 @@ int main()
     }
     printf("请依次输入想购买的商品，通道编号，购买个数\n");
 
-    scanf("%c", &g, 1);
+    scanf("%c", &g);
     getchar();
     for (int j = 0;j <= 1;j++)
     {
