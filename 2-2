@@ -79,7 +79,7 @@ int main() {
                     while (1) {
                         printf("请输入一个数字（输入 'back' 撤销上一次读取）：\n");
                         char coin[20]; // 用于存储用户输入
-                        scanf("%s", coin, (unsigned)_countof(coin)); // 读取用户输入
+                        scanf("%s", coin, (unsigned)_sizeof(coin)); // 读取用户输入
 
                         // 检查是否输入 "back"
                         if (strcmp(coin, "back") == 0) {
