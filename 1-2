@@ -3,8 +3,8 @@
 int main() {
     int a, b[10],i,sum;
     sum = 0;
-    scanf("%d", &a);
-    scanf("%d", &sum);
+    scanf_s("%d", &a);
+    scanf_s("%d", &sum);
    
         if (sum >= a)
         {
@@ -16,7 +16,7 @@ int main() {
             for (i = 0;sum < a;i++)
             {
 
-                scanf("%d", &b[i]);
+                scanf_s("%d", &b[i]);
                 if (b[i] != 1 && b[i] != 2 && b[i] != 5)
                     printf("请输入正确的投币金额/n");
                 else {
