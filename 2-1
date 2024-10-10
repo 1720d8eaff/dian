@@ -13,7 +13,7 @@ int main() {
 
     for (k = 0; k < 5; k++) {
         char test[10]; // 用于检验END
-        scanf("%s", test, sizeof(test));
+        scanf_s("%s", test, sizeof(test));
 
         if (strcmp(test, "END") == 0) { // 检查是否输入END
             break;
@@ -21,22 +21,22 @@ int main() {
 
         c[k] = test[0]; // 摆放货品种类
         for (int n = 0; n < 3; n++) {
-            scanf("%d", &a[k][n]); // 读取通道标号，单价和个数
+            scanf_s("%d", &a[k][n]); // 读取通道标号，单价和个数
         }
     }
 
     printf("请依次输入想购买的商品，通道编号，购买个数（输入END结束）：\n");
     for (p = 0; p < 5; p++) {
         char exam[10];
-        scanf("%s", exam, sizeof(exam));
+        scanf_s("%s", exam, sizeof(exam));
 
         if (strcmp(exam, "END") == 0) { // 检查是否输入END
             break;
         }
 
         g[p] = exam[0]; // 摆放货品种类
-        scanf("%d", &f[p][0]); // 通道编号
-        scanf("%d", &f[p][1]); // 购买个数
+        scanf_s("%d", &f[p][0]); // 通道编号
+        scanf_s("%d", &f[p][1]); // 购买个数
     }
 
     // 记录能匹配的,加p的一律是第p个想买的,p从0开始
@@ -67,7 +67,7 @@ int main() {
 
                 while (sum < money) {
                     int coin;
-                    scanf("%d", &coin);
+                    scanf_s("%d", &coin);
                     if (coin != 1 && coin != 2 && coin != 5) {
                         printf("请输入正确的投币金额\n");
                     }
