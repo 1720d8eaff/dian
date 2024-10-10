@@ -5,10 +5,10 @@ int main()
 	char c;
 	int  a[3];
 	//printf("请依次输入货品种类，通道标号，货品单价，货品个数\n");
-	scanf("%c", &c);
+	scanf_s("%c", &c);
 	for (int n = 0;n <= 2;n++)
 	{
-		scanf("%d", &a[n]);
+		scanf_s("%d", &a[n]);
 	}
 	
 	printf("%d: ", a[0]);
